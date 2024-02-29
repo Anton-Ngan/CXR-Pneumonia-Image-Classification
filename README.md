@@ -19,7 +19,7 @@ The model was trained on a dataset of 5,216 images and tested on a dataset of 62
 
 ## Major Issue 1: Imbalanced Dataset
 One of the major issues in training the model is the imbalanced training dataset. The pneumonia CXRs outnumbered the normal CXRs by three fold. Class weighting was used to 
-minimised the imbalance in the dataset. Without class weighting, the model would be bias towards classifying CXRs with pneumonia. This is shown in the image below as:
+minimised the imbalance in the dataset. Without class weighting, the model would be bias towards classifying CXRs with pneumonia. This is shown in the training loop below:
 * The test dataset contained 390 pneumonia CXRs out of the 624 total images in this dataset (this roughly equates to 63% of the images in test dataset).
 * The train dataset contained 3,875 pneumonia CXRs out of the total 5,216 images in this dataset (this roughly equates to 74% of the images in train dataset).
 
@@ -39,21 +39,21 @@ A CNN model with 24-layers was built and trained to detect pneumonia in the CXRs
 * Dropout layer was added to also prevent the model from overfitting
 * Multiple convolution layers were added to the model to extract the prominent features in the CXRs
 The model was trained using 4 epochs.
-* As the problem was binary classification, binary cross entropy was the loss function
-* The optimizer used was SGD
+* As the problem was binary classification, the loss function used was binary cross entropy
+* The optimizer was SGD
 
 ![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/e2587c17-15ea-4a46-bc4a-6f60a6a4f8c5)
 
 ## Model Results and Evaluation
 An inference was performed on the test dataset before the model was trained. After one epoch, the train loss was significantly reduced by approximately 0.35 
-and the accuracy rose from roughly 36% to 85%. 
+and the accuracy rose from roughly 36% to 85%. After the fourth epoch, the training loss was approximately 0.33 and the test accuracy was approximately 87%.
 
 ![image](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/f6004333-8e5d-4d10-9c7f-110ec64aaa2e)
 
 
-The confusion matrix shows that the model is more prone to type II errors (as it detects pneumonia in normal CXR in the 55 cases). In a medical imaging context,
-type II errors would be much preferred over type I errors. This is because not diagnosing a patient when actually have an illness is much more fatal than 
-diagnosing the patient without an illness. However, this does not mean that type I errors should be relaxed. This is because under MRPBA, radiographers should 
+The confusion matrix shows that the model is more prone to type II errors (as it has 55 cases where it detected pneumonia in normal (truth) CXR). In a medical imaging context,
+type II errors would be much preferred over type I errors. This is because failure to diagnose a patient with an illness is much more fatal than 
+diagnosing a patient without an illness. However, this does not mean that type I errors should be relaxed. The MRPBA recognises that radiographers should 
 prevent unnecessary radiation exposure to the patients. 
 
 ![image](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/4a35cfb1-16be-4c93-b187-d1db5173965e)
