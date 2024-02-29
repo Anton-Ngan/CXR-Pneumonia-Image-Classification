@@ -1,13 +1,12 @@
 import os
 import torch
 from torch import nn
-from tqdm.auto import tqdm
 from torch.utils.data import DataLoader, WeightedRandomSampler
 from torchvision import datasets, transforms
 from pathlib import Path
 from torchmetrics.classification import BinaryAccuracy
-from pneumonia_cxr_model import PneumoniaModel
-from step_functions import train_model, test_step
+from pneumonia_model import PneumoniaModel
+from train_test_functions import train_model
 
 ## Device agnostic
 device = "cuda" if torch.cuda.is_available() else "cpu"
