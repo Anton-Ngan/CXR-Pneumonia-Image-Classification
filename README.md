@@ -39,8 +39,8 @@ A CNN model with 24-layers was built and trained to detect pneumonia in the CXRs
 * Dropout layer was added to also prevent the model from overfitting
 * Multiple convolution layers were added to the model to extract the prominent features in the CXRs
 
-The model was trained using 4 epochs.
-* As the problem was binary classification, the loss function used was binary cross entropy
+The model was trained under 4 epochs.
+* The loss function used was binary cross entropy
 * The optimizer was SGD
 
 ![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/e2587c17-15ea-4a46-bc4a-6f60a6a4f8c5)
