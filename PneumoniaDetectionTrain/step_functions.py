@@ -82,6 +82,15 @@ def train_model(model: torch.nn.Module,
              "test_acc": []
              }
 
+  test_loss, test_acc = test_step(model=model,
+                                    data_loader=test_data_loader,
+                                    loss_fn=loss_fn,
+                                    device=device,
+                                    accuracy_fn=accuracy_fn)
+  print(f"Epoch: n/a | Train loss: n/a | Train accuracy: n/a |Test loss: {test_loss:.5f} | Test accuracy: {test_acc*100:.2f}%")
+  results["test_loss"].append(test_loss)
+  results["test_acc"].append(test_acc)
+
   for epoch in tqdm(range(epochs)):
     train_loss, train_acc = train_step(model=model,
                                        data_loader=train_data_loader,

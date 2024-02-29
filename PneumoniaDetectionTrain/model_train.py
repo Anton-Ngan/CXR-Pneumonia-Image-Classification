@@ -100,15 +100,14 @@ MODEL_PATH.mkdir(parents=True, exist_ok=True)
 MODEL_NAME = "pneumonia_cxr_model.pth"
 MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
 
-
 if __name__ == "__main__":
     # Make initial inference using test dataset
-    test_loss, test_acc = test_step(model=CXRModel,
-                                    data_loader=test_dl,
-                                    loss_fn=loss_fn,
-                                    device=device,
-                                    accuracy_fn=accuracy)
-    print(f"Test loss: {test_loss:.5f} | Test accuracy: {test_acc*100:.2f}%")
+    # test_loss, test_acc = test_step(model=CXRModel,
+    #                                 data_loader=test_dl,
+    #                                 loss_fn=loss_fn,
+    #                                 device=device,
+    #                                 accuracy_fn=accuracy)
+    # print(f"Test loss: {test_loss:.5f} | Test accuracy: {test_acc*100:.2f}%")
 
     ## Train the model
     model_results = train_model(model=CXRModel,
