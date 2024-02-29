@@ -47,7 +47,9 @@ The model was trained under 4 epochs.
 
 ## Model Results and Evaluation
 An inference was performed on the test dataset before the model was trained. After one epoch, the train loss was significantly reduced by approximately 0.35 
-and the accuracy rose from roughly 36% to 85%. After the fourth epoch, the training loss was approximately 0.33 and the test accuracy was approximately 87%.
+and the accuracy rose from roughly 36% to 85%. After the fourth epoch, the training loss was approximately 0.33 and the test accuracy was approximately 87%. This
+is a good accuracy, however, in the context of healthcare, the accuracy needed for such a model to be deployed would need to be extremely accurate to match the stringent
+process of patient diagnosis (~99.99%).
 
 ![image](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/f6004333-8e5d-4d10-9c7f-110ec64aaa2e)
 
