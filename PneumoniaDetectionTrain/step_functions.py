@@ -1,7 +1,6 @@
 import torch
 from typing import Callable
 from tqdm.auto import tqdm
-from matplotlib.pyplot import plot as plt
 
 
 def train_step(model: torch.nn.Module,
@@ -30,7 +29,7 @@ def train_step(model: torch.nn.Module,
     optimizer.step()
 
     if sample % 320 == 0:
-      print(f"Examined {sample} samples out of {len(data_loader.dataset)}")
+      print(f"Train || Examined {sample}/{len(data_loader.dataset)}")
 
   train_loss /= len(data_loader)
   train_acc /= len(data_loader)
@@ -39,10 +38,10 @@ def train_step(model: torch.nn.Module,
 
 
 def test_step(model: torch.nn.Module,
-               data_loader: torch.utils.data.DataLoader,
-               loss_fn: torch.nn.Module,
-               device: torch.device, 
-               accuracy_fn: Callable):
+              data_loader: torch.utils.data.DataLoader,
+              loss_fn: torch.nn.Module,
+              device: torch.device, 
+              accuracy_fn: Callable):
   model.eval()
   test_loss, test_acc = 0, 0
   sample = 0
@@ -59,8 +58,8 @@ def test_step(model: torch.nn.Module,
       test_loss += loss
       test_acc += accuracy_fn(y_label, target)
     
-      if sample % 320 == 0:
-        print(f"Examined {sample} samples out of {len(data_loader.dataset)}")
+      if sample % 64 == 0:
+        print(f"Test || Examined {sample}/{len(data_loader.dataset)}")
 
     test_loss /= len(data_loader)
     test_acc /= len(data_loader)
