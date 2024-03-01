@@ -4,11 +4,11 @@ from tqdm.auto import tqdm
 
 
 def train_step(model: torch.nn.Module,
-                data_loader: torch.utils.data.DataLoader,
-                loss_fn: torch.nn.Module,
-                optimizer: torch.optim.Optimizer,
-                device: torch.device,
-                accuracy_fn: Callable):
+               data_loader: torch.utils.data.DataLoader,
+               loss_fn: torch.nn.Module,
+               optimizer: torch.optim.Optimizer,
+               device: torch.device,
+               accuracy_fn: Callable):
   model.train()
   train_loss, train_acc = 0, 0
   sample = 0
