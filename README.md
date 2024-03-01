@@ -43,7 +43,6 @@ dataset and could not generalise to the images in the test dataset. Epochs ≥5 
 A CNN model with 24-layers was built and trained to detect pneumonia in the CXRs. 
 * Batch normalisation layers were added to the model to help reduce the model from relying heavily on specific neurons
 * Dropout layer was added to also prevent the model from overfitting
-* Multiple convolution layers were added to the model to extract the prominent features in the CXRs
 
 The model was trained under 4 epochs.
 * The loss function used was binary cross entropy
