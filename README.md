@@ -75,6 +75,7 @@ The model achieved a recall score of 92.31% on the test dataset. Intuitively, th
 a precision score of 86.75% on the test dataset. Intuitively, this means that out of all the **predicted** pneumonia cases, the cases that **actually (truth)** had pneumonia is 89.44%. The F1 score is
 92.31%, which means that the model can effectively identify positive cases while minimising false positives and false negatives.
 
-![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/20e32c1a-2842-422c-a073-6544791fb003)
+![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/efd6f5ba-1924-49eb-b953-6066096645cb)
+
 
 
