@@ -26,7 +26,7 @@ The model was trained on a dataset of 5,216 images and tested on a dataset of 62
 
 ## Limitations
 * The dataset contains an imbalance of pneumonia and normal CXR images
-* The CXR image dataset only contains CXRs from paediatrics (aged 1 to 5), consequently, the model cannot generalise to detection of pneumonia in adult CXRs
+* The CXR image dataset only contains CXRs from paediatrics (aged 1 to 5), consequently, the model cannot generalise to the detection of pneumonia in adult CXRs
 
 ## Major Issue 1: Imbalanced Dataset
 One of the major issues in training the model is the imbalanced training dataset. The pneumonia CXRs outnumbered the normal CXRs by threefold. Class weighting was used to 
