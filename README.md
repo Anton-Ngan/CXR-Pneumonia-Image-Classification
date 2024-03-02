@@ -1,4 +1,4 @@
-# CXR Pneumonia CNN
+# Paediatric CXR Pneumonia CNN
 
 ![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/6798c410-ac5f-42b1-acec-14afb083ebb0)
 
@@ -17,7 +17,8 @@ local URL link in the terminal. The link will open up a web demo for the image c
 ## Description
 A CNN model was built and trained using the PyTorch framework to detect whether the chest x-ray (CXR) image had pneumonia or not. Pneumonia is an infection that causes 
 inflammation in the lungs. AP (anterior-posterior or "front-to-back") CXRs are often taken to assist the radiologist in the diagnosis of pneumonia. Pneumonia in AP CXRs is
-often characterised by radiopaque regions within the lobar region of the lungs.
+often characterised by radiopaque regions within the lobar region of the lungs. The [dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) was taken from Kaggle.
+Note that this dataset **contained** CXRs from paediatrics aged one to five. 
 
 The model was trained on a dataset of 5,216 images and tested on a dataset of 624 images. The CXR in the dataset was classified into two classes - normal or pneumonia. 
 
