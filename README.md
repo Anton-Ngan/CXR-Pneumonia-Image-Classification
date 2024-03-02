@@ -22,7 +22,8 @@ local URL link in the terminal. The link will open up a web demo for the image c
 A CNN model was built and trained using the PyTorch framework to detect whether paediatric chest x-ray (CXR) images had pneumonia or not. Pneumonia is an infection that causes 
 inflammation in the lungs. AP (anterior-posterior or "front-to-back") CXRs are often taken to assist the radiologist in the diagnosis of pneumonia. Pneumonia in AP CXRs is
 often characterised by radiopaque regions within the lobar region of the lungs. The [dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) was taken from Kaggle.
-Note that this dataset **contains** CXRs from paediatrics aged one to five, so the model would not generalise well to adult CXRs. 
+Note that this dataset **contains** CXRs from paediatrics aged one to five, so the model would not generalise well to adult CXRs. Inferiorly to superiorly, the CXRs in this dataset cover the left and right costophrenic 
+angles to the apex of the lungs.
 
 The model was trained on a dataset of 5,216 images and tested on a dataset of 624 images. The CXR in the dataset was classified into two classes - normal or pneumonia. 
 
@@ -31,7 +32,7 @@ The model was trained on a dataset of 5,216 images and tested on a dataset of 62
 ## Limitations
 * The dataset contains an imbalance of pneumonia and normal CXR images
 * The CXR training dataset only contains CXRs from paediatrics (aged 1 to 5), consequently, the model cannot generalise to the detection of pneumonia in adult CXRs
-* The CXRs training dataset contains only AP CXRs, so the model may not generalise well to supine, PA ("back-to-front") and erect CXRs
+* The CXRs training dataset contains only AP CXRs, so the model may not generalise well to PA ("back-to-front") CXRs
 
 ## Major Issue 1: Imbalanced Dataset
 One of the major issues in training the model is the imbalanced training dataset. The pneumonia CXRs outnumbered the normal CXRs by threefold. Class weighting was used to 
