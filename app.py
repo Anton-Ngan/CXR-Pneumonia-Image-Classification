@@ -21,8 +21,8 @@ model.load_state_dict(checkpoint["model_state_dict"])
 
 # Example images
 examples = []
-n = 5
-p = 8
+n = 2
+p = 2
 for i in range(1, n+1):
     examples.append("examples/n" + str(i) + ".jpeg")
 for i in range(1, p+1):
