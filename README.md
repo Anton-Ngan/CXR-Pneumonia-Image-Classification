@@ -3,7 +3,7 @@
 ![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/6798c410-ac5f-42b1-acec-14afb083ebb0)
 
 ## Run Model on Web Browser
-If you want to use your own CXR images to detect whether the CXR contains pneumonia or not, simply run the `app.py` file and click on the
+If you want to use your own paediatric CXR images to detect whether the CXR contains pneumonia or not, simply run the `app.py` file and click on the
 local URL link in the terminal. The link will open up a web demo for the image classifier as shown below. Here are some links to test out the model:
 * [Link 1](https://pneumonia.biomedcentral.com/articles/10.15172/pneu.2014.5/482)
 * [Link 2](https://radiopaedia.org/cases/normal-chest-6-year-old-3?lang=gb)
