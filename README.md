@@ -4,7 +4,11 @@
 
 ## Run Model on Web Browser
 If you want to use your own CXR images to detect whether the CXR contains pneumonia or not, simply run the `app.py` file and click on the
-local URL link in the terminal. The link will open up a web demo for the image classifier as shown below. 
+local URL link in the terminal. The link will open up a web demo for the image classifier as shown below. Here are some links to test out the model:
+* [Link 1](https://pneumonia.biomedcentral.com/articles/10.15172/pneu.2014.5/482)
+* [Link 2](https://radiopaedia.org/cases/normal-chest-6-year-old-3?lang=gb)
+* [Link 3](https://radiopaedia.org/cases/normal-chest-radiograph-paediatric-under-1?lang=gb)
+
 ![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/ab48b34f-14da-41f5-b3e8-ef8aafcf4eba)
 
 
@@ -26,7 +30,8 @@ The model was trained on a dataset of 5,216 images and tested on a dataset of 62
 
 ## Limitations
 * The dataset contains an imbalance of pneumonia and normal CXR images
-* The CXR image dataset only contains CXRs from paediatrics (aged 1 to 5), consequently, the model cannot generalise to the detection of pneumonia in adult CXRs
+* The CXR training dataset only contains CXRs from paediatrics (aged 1 to 5), consequently, the model cannot generalise to the detection of pneumonia in adult CXRs
+* The CXRs training dataset contains only AP CXRs, so the model may not generalise well to supine, PA ("back-to-front") and erect CXRs
 
 ## Major Issue 1: Imbalanced Dataset
 One of the major issues in training the model is the imbalanced training dataset. The pneumonia CXRs outnumbered the normal CXRs by threefold. Class weighting was used to 
