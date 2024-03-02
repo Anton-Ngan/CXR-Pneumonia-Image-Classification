@@ -1,4 +1,4 @@
-# Paediatric CXR Pneumonia CNN
+# Paediatric AP CXR Pneumonia CNN
 
 ![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/6798c410-ac5f-42b1-acec-14afb083ebb0)
 
