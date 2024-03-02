@@ -24,6 +24,10 @@ The model was trained on a dataset of 5,216 images and tested on a dataset of 62
 
 ![Capture](https://github.com/Anton-Ngan/CXR-Pneumonia-Image-Classification/assets/126856263/360d3dfd-a000-45e9-97ae-19283137c92b)
 
+## Limitations
+* The dataset contains an imbalance of pneumonia and normal CXR images
+* The CXR image dataset only contains CXRs from paediatrics (aged 1 to 5), consequently, the model cannot generalise to detection of pneumonia in adult CXRs
+
 ## Major Issue 1: Imbalanced Dataset
 One of the major issues in training the model is the imbalanced training dataset. The pneumonia CXRs outnumbered the normal CXRs by threefold. Class weighting was used to 
 minimise the imbalance in the dataset. Without class weighting, the model would be bias towards classifying CXRs with pneumonia. This is shown in the training loop below:
